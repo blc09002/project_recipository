@@ -22,7 +22,8 @@ def show
   end
 
   def destroy
-    sign_out
-    redirect_to root_url
+    User.find(params[:id]).destroy
+    flash[:success] = "User destroyed."
+    redirect_to users_url
   end
 end
