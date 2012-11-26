@@ -15,10 +15,14 @@ def show
   	if @user.save
   		sign_in @user
   		flash[:success] = "Welcome to Recipository!"
-
-  		redirect_to @user
+		redirect_to @user
   	else
   		render 'new'
   	end
+  end
+
+  def destroy
+    sign_out
+    redirect_to root_url
   end
 end
