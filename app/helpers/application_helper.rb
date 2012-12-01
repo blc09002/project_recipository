@@ -3,7 +3,7 @@ module ApplicationHelper
 # Return the full website title on each page
 
 	def full_title (page_title)
-		base_title = "Recipository "
+		base_title = "Recipository"
 		if page_title.empty?
 			base_title
 		else
