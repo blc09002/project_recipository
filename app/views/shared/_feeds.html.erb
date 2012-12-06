@@ -1,0 +1,6 @@
+<% if @feeds_items.any? %>
+  <ol class="recipes">
+    <%= render partial: 'shared/feeds_item', collection: @feeds_items %>
+  </ol>
+  <%= will_paginate @feeds_items %>
+<% end %>

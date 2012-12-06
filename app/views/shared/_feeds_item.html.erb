@@ -1,0 +1,12 @@
+<li id="<%= feeds_item.id %>">
+  
+  <span class="user">
+    <%= link_to feeds_item.user.name, feeds_item.user %>
+  </span>
+  <span class="content"><%= feeds_item.content %></span>
+   <% if current_user?(feeds_item.user) %>
+    <%= link_to "delete", feeds_item, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: feeds_item.content %>
+  <% end %>
+</li>
