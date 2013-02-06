@@ -5,9 +5,7 @@ class StaticPagesController < ApplicationController
       @feed_items = current_user.feed.paginate(page: params[:page])
       @recipe = current_user.recipes.build
       @feeds_items = current_user.feeds.paginate(page: params[:page])
-      
-
-    end
+        end
   end
 
   def help
